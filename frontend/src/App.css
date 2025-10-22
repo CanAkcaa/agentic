@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stolzl_regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stolzl_light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stolzl_medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stolzl_medium.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stolzl_bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stolzl_extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+.ant-table table {
+  border-spacing: 0 10px;
+  border-collapse: separate;
+}
+
+/* Satır arka plan ve border ayarı */
+.styled-table .custom-row {
+  background-color: #FCFCFC;
+  position: relative;
+}
+
+/* Satırın etrafına border eklemek için */
+.styled-table .custom-row::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #F3F3F3;
+  border-radius: 26px;
+  pointer-events: none; /* Tıklama olaylarını engellememek için */
+}
+
+/* Hücre padding'i, border yok */
+.styled-table tr.custom-row td {
+  padding: 16px;
+  border: none; /* iç kenarlarda çizgi istemiyoruz */
+}
+
+/* Köşe radius'lar */
+.styled-table .custom-row td:first-child {
+  border-top-left-radius: 26px;
+  border-bottom-left-radius: 26px;
+}
+
+.styled-table .custom-row td:last-child {
+  border-top-right-radius: 26px;
+  border-bottom-right-radius: 26px;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+.scrollable-div::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb:hover {
+  background: #888;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.scollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

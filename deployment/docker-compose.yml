@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  mobilyu-frontend:
+    container_name: mobilyu-frontend
+    image: mobilyudockerhub/mobilyu-frontend:1.0.0
+    restart: always
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    ports:
+      - 8010:90
+    networks:
+      - mobilyunetwork
+    env_file:
+      - ../deployment/.env.compose.https
+
+networks:
+  mobilyunetwork:
+    external: true

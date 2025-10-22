@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": false,        // Kullanılmayan local değişkenler için
+    "noUnusedParameters": false,    // Kullanılmayan parametreler için
+    "allowUnusedLabels": true,      // Kullanılmayan label'lar için
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
