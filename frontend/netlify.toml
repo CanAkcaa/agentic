@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/api/structure/*"
-  to = "http://20.52.103.241:8018/api/structure/:splat"
+  from = "/api/conversation/*"
+  to = "http://20.52.103.241:8018/api/conversation/:splat"
   status = 200
   force = true
 
