@@ -1,37 +1,26 @@
+# 🔁 IP tabanlı API yönlendirmesi
 [[redirects]]
   from = "/api/*"
-  to = "https://api.kanguru365.com/api/:splat"
+  to = "http://20.52.103.241:8018/api/:splat"
   status = 200
   force = true
 
-[[redirects]]
-  from = "/upload/*"
-  to = "https://fileupload.kanguru365.com/api/:splat"
-  status = 200
-  force = true
-
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    Access-Control-Allow-Credentials = "true"
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-
-# SPA için gerekli redirect - tüm client route'ları için
+# 🌐 SPA (Single Page Application) yönlendirmesi
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+# 🧱 API için CORS başlıkları
 [[headers]]
   for = "/api/*"
   [headers.values]
-    Access-Control-Allow-Credentials = "true"
     Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+    Access-Control-Allow-Credentials = "true"
+    Access-Control-Allow-Methods = "GET, OPTIONS, PATCH, DELETE, POST, PUT"
     Access-Control-Allow-Headers = "*"
 
-# Asset ve statik dosyalar için cache kontrolü
+# ⚡ Statik dosyalar için cache kontrolü
 [[headers]]
   for = "/*.js"
   [headers.values]
