@@ -1,7 +1,48 @@
-[build]
-  base = "frontend"
-  command = "npm ci && npm run build"
-  publish = "build"
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.kanguru365.com/api/:splat"
+  status = 200
+  force = true
 
-[build.environment]
-  NODE_VERSION = "18"
+[[redirects]]
+  from = "/upload/*"
+  to = "https://fileupload.kanguru365.com/api/:splat"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Credentials = "true"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+
+# SPA için gerekli redirect - tüm client route'ları için
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Credentials = "true"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+    Access-Control-Allow-Headers = "*"
+
+# Asset ve statik dosyalar için cache kontrolü
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
