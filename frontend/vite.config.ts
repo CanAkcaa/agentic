@@ -12,9 +12,9 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 8083,
       proxy: {
-        ...(env.VITE_BACKOFFICE_URL && {
+        ...(env.VITE_STRUCTER_URL && {
           '/api': {
-            target: `${env.VITE_BACKOFFICE_URL}/api`,
+            target: `${env.VITE_STRUCTER_URL}/api`,
             changeOrigin: true,
             rewrite: (path) => path.replace(/^\/api/, '')
           },
