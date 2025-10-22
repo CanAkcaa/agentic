@@ -1,5 +1,5 @@
-VITE_STRUCTER_URL="http://20.52.103.241:8018"
-VITE_AGENTIC_URL="http://20.52.103.241:8019" 
+VITE_STRUCTER_URL="https://aginies.netlify.app"
+VITE_AGENTIC_URL="https://aginies.netlify.app" 
 VITE_API_URL="https://api.kanguru365.com"
 VITE_AXIOS_TIMEOUT="120000"
 VITE_APP_VERSION="version_1_0_0"

@@ -1,7 +1,13 @@
-# 🔁 IP tabanlı API yönlendirmesi
+[[redirects]]
+  from = "/api/structure/*"
+  to = "http://20.52.103.241:8018/api/structure/:splat"
+  status = 200
+  force = true
+
+# 🔁 Diğer tüm /api/* çağrılarını 8019'a yönlendir
 [[redirects]]
   from = "/api/*"
-  to = "http://20.52.103.241:8018/api/:splat"
+  to = "http://20.52.103.241:8019/api/:splat"
   status = 200
   force = true
 
