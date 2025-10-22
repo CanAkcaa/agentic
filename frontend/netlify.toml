@@ -30,6 +30,7 @@
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET,OPTIONS,PATCH,DELETE,POST,PUT"
     Access-Control-Allow-Headers = "*"
+    Referrer-Policy = "no-referrer-when-downgrade"
 
 # Asset ve statik dosyalar için cache kontrolü
 [[headers]]
